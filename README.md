@@ -1,46 +1,38 @@
 # URL Shortener App
 
-This is starter code for URL Shortener Project.
+## Overview
 
-Fork this repository and use the given files to start with.
+The URL Shortener App is a web service that converts long website addresses into shorter, more manageable links. This makes URLs easier to share and remember.
 
-## Idea
+## Features
 
-A URL shortener website is a service that converts long website addresses into shorter, more manageable links. Users input a lengthy URL, and the website generates a condensed version, making it easier to share and remember.
+- **URL Shortening**: Users can input a lengthy URL, and the app will generate a shorter version.
 
-## Interface
+- **Custom Aliases**: Users can provide a custom alias for their shortened URL, or let the app generate a random one.
 
-The application interface consists of one page which contains:
+- **Redirection**: Accessing the short URL redirects the user to the original long URL.
 
-* A form to shorten the URL, which takes two inputs:
-    - the long version of the url
-    - the alias of the url (defaults to a random string)
-* A table which contains the previously shortened URLs.
+- **404 Error Handling**: If a non-existent short URL is accessed, a 404 error page is displayed.
 
-## Short URLs
+- **URL Management**: A table on the main page lists all previously shortened URLs for easy reference.
 
-The short URLs are written in this form:
+## Short URL Format
+
+The short URLs are structured as follows:
 
 ```
+
 http://localhost:3000/{alias}
+
 ```
 
-## Application Logic
 
-* When a client tries to access the short URL, they should be redirected to the original long URL.
-* If the client accesses a URL which doesn't exist, a `404` error should be displayed.
-* There's no required authentication or authorization to generate short URLs.
+## Usage
 
-## Project Criteria
+1\. **Submit URL**: Enter a long URL and optionally an alias in the provided form.
 
-- [ ] The application runs locally without any crashes
-- [ ] The application logic is implemented correctly
-- [ ] The application uses server-side rendering
-- [ ] The application uses a MongoDB database
+2\. **Generate Short URL**: Submit the form to create a shortened URL.
 
-## Project Evaluation (50 pts.)
+3\. **Access Short URL**: Use the short URL to be redirected to the original long URL.
 
-* Project Completeness (25 pts.)
-* Clean Code and Modulation (15 pts.)
-* Descriptive Git Commit Messages (10 pts.)
-* Nice touches (5 pts. bonus)
+4\. **Error Handling**: Encounter a 404 error if a short URL does not exist in the database.
